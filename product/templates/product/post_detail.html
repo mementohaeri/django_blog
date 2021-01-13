@@ -1,0 +1,13 @@
+{% extends 'product/base.html'%}
+
+{% block content %}
+    <div class="post">
+        {% if post.posted_date%}
+            <div class="date">
+                <p>Published: {{post.posted_date}}</p>
+            </div>
+        {% endif %}
+        <h2>{{post.name}}</h2>
+        <p>{{post.desc|linebreaksbr}}</p>
+    </div>
+{% endblock %}
